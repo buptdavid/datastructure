@@ -3,7 +3,8 @@ package org.buptdavid.datastructure.tree;
 /**
  * 检查是否平衡树,此处平衡树的定义是两棵子树的高度差不超过1
  * @author weijielu
- *
+ * @see CheckBalanceTreeTest
+ * @see TreeNode
  */
 public class CheckBalanceTree {
 	

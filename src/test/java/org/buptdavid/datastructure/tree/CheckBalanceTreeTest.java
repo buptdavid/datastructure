@@ -7,7 +7,8 @@ import org.junit.Test;
 /**
  * 平衡树Check测试类
  * @author weijielu
- *
+ * @see CheckBalanceTree
+ * @see TreeNode
  */
 public class CheckBalanceTreeTest {
 	@Test

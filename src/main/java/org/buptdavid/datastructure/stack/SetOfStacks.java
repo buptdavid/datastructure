@@ -3,6 +3,8 @@ package org.buptdavid.datastructure.stack;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.buptdavid.datastructure.Node;
+
 
 /**
  * 此类用来表示若干具有一定容量的栈的集合<br>
@@ -10,7 +12,9 @@ import java.util.List;
  * 当最后一个栈pop空后，pop倒数第二个栈，依次类推<br>
  * 
  * @author weijielu
- * 
+ * @see StackTest
+ * @see IStack
+ * @see Node
  */
 public class SetOfStacks<T> implements IStack<T> {
 	List<StackCapacity<T>> stacks = new ArrayList<StackCapacity<T>>();

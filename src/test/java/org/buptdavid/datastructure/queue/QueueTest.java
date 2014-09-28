@@ -2,11 +2,15 @@ package org.buptdavid.datastructure.queue;
 
 import junit.framework.Assert;
 
+import org.buptdavid.datastructure.Node;
 import org.junit.Test;
 
 /**
+ * 队列的测试类
  * @author weijielu
- *
+ * @see IQueue
+ * @see Queue
+ * @see Node
  */
 public class QueueTest {
 	IQueue<Integer> queue;

@@ -4,6 +4,8 @@ package org.buptdavid.datastructure.tree;
  * 二叉查找树的判断<br>
  * 二叉查找树:对所有节点来说:所有左子树节点都小于等于其根节点;所有右子树节点都大于其根节点
  * @author weijielu
+ * @see BinarySearchTreeTest
+ * @see TreeNode
  */
 public class BinarySearchTree {
 	

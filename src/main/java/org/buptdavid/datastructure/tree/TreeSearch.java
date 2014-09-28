@@ -3,7 +3,8 @@ package org.buptdavid.datastructure.tree;
 /**
  * 实现树的前序,中序,后续遍历搜索
  * @author weijielu
- *
+ * @see TreeSearchTest
+ * @see TreeNode
  */
 public class TreeSearch<T> {
 	StringBuffer searchPath = new StringBuffer();

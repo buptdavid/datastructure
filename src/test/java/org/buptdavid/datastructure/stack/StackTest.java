@@ -2,11 +2,17 @@ package org.buptdavid.datastructure.stack;
 
 import junit.framework.Assert;
 
+import org.buptdavid.datastructure.Node;
 import org.junit.Test;
 
 /**
  * 栈的实现测试类
  * @author weijielu
+ * @see Stack
+ * @see SetOfStacks
+ * @see StackWithMin
+ * @see IStack
+ * @see Node
  */
 public class StackTest {
 	IStack<Integer> stack;

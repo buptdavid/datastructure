@@ -6,7 +6,9 @@ import org.buptdavid.datastructure.Node;
  * 队列的实现
  * 
  * @author weijielu
- *
+ * @see QueueTest
+ * @see IQueue
+ * @see Node
  */
 public class Queue<T> implements IQueue<T> {
 	Node<T> first, last;

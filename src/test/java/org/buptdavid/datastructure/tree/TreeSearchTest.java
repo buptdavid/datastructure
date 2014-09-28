@@ -8,7 +8,8 @@ import org.junit.Test;
 /**
  * TreeSearch测试类
  * @author weijielu
- *
+ * @see TreeSearch
+ * @see TreeNode
  */
 public class TreeSearchTest {
 	

@@ -5,6 +5,9 @@ import org.buptdavid.datastructure.Node;
 /**
  * 栈的实现
  * @author weijielu
+ * @see StackTest
+ * @see IStack
+ * @see Node
  */
 public class Stack<T> implements IStack<T>{
     Node<T> top;

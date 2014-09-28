@@ -8,6 +8,8 @@ import org.junit.Test;
 /**
  * 二叉查找树测试
  * @author weijielu
+ * @see BinarySearchTree
+ * @see TreeNode
  */
 public class BinarySearchTreeTest {
 	TreeNode<Integer> node8;

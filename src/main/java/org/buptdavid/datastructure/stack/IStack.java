@@ -3,6 +3,10 @@ package org.buptdavid.datastructure.stack;
 /**
  * 栈的接口
  * @author weijielu
+ * @see Stack
+ * @see SetOfStacks
+ * @see StackWithMin
+ * @see StackTest
  */
 public interface IStack<T> {
 	
