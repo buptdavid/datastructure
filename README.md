@@ -3,13 +3,11 @@
 
 准备工作
 ------
-    1 为你的系统安装Maven 
-    2 Setup环境 请在终端命令行上运行 “mvn clean install -DskipTests”， 然后再运行 “mvn eclipse:eclipse”, 将项目Import到你的Eclipse中
+  1 为你的系统安装Maven
+  2 Setup环境 请在终端命令行上运行 “mvn clean install -DskipTests”， 然后再运行 “mvn eclipse:eclipse”,将项目Import到你的Eclipse中
 
   目录 
   1. 字符串
-    [字符串压缩](https://github.com/buptdavid/datastructure/blob/master/src/main/java/org/buptdavid/datastructure/array/CompressStr.java)
-    [矩阵](https://github.com/buptdavid/datastructure/blob/master/src/main/java/org/buptdavid/datastructure/array/SetZeroMatrix.java)
   2. 链表 
   3. 查找 
   4. 排序 
