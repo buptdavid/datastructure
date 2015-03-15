@@ -55,6 +55,20 @@ public class SortTest {
 		validate();
 	}
 	
+	@Test
+	public void testInsertSort(){
+		sort = new InsertSort();
+		sort.sort(array);
+		validate();
+	}
+	
+	@Test
+	public void testInsertOptimizeSort(){
+		sort = new InsertOptimizeSort();
+		sort.sort(array);
+		validate();
+	}
+	
 	private void validate(){
 		for(int i = 0; i < array.length - 1; i++){
 			Assert.assertTrue(array[i] <= array[i + 1]);
