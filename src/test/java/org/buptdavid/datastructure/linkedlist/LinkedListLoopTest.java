@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * LinkedListRing测试类
  * @author weijielu
- * @see LinkedListRing
+ * @see LinkedListLoop
  */
 public class LinkedListLoopTest {
 	

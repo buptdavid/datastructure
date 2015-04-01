@@ -7,7 +7,7 @@ import org.buptdavid.datastructure.Node;
  * 2. 如果有环儿计算环儿的长度<br>
  * 3. 找出环儿的连接点<br>
  * @author weijielu
- * @see LinkedListRingTest
+ * @see LinkedListLoopTest
  */
 public class LinkedListLoop {
 	
