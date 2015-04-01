@@ -29,6 +29,7 @@ public class TimeServerHandler implements Runnable {
 			String currentTime = null;
 			String body = null;
 			while(true){
+				// 此处如果无数据，则会被阻塞,直到: 1. 有数据可读; 2. 可用数据读取完毕(客户端输出流关闭); 3.发生空指针或IO异常
 				body = in.readLine();
 				if(body == null){
 					break;
