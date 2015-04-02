@@ -18,6 +18,7 @@ public class TimeClientHandler implements Runnable {
 		this.port = port;
 	}
 
+	@Override
 	public void run() {
 		Socket socket = null;
 		BufferedReader in = null;
