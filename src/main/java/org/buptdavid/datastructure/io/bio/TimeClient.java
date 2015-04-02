@@ -21,9 +21,8 @@ public class TimeClient {
 		}
 		
 		int i = 0;
-		while(i < 1000){
-			new Thread(new TimeClientHandler(port)).start();
-			i++;
+		while(i++ < 1000){
+			new Thread(new TimeClientHandler(port), "TimeClient-" + i).start();
 		}
 	}
 

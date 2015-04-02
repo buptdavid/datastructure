@@ -31,7 +31,7 @@ public class TimeClientHandler implements Runnable {
 			// Sleep 0-10 s中的随机时间
 			Thread.sleep((long) (1000 * Math.random() * 10));
 			out.println("QUERY TIME ORDER");
-			System.out.println("Thread " + Thread.currentThread().toString() + " starting.....");
+			System.out.println("Send order to server succeed.");
 			
 			String resp = in.readLine();
 			System.out.println("Now is : " + resp);
