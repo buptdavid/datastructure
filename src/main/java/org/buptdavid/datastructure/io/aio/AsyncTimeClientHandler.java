@@ -33,6 +33,12 @@ public class AsyncTimeClientHandler implements CompletionHandler<Void, AsyncTime
     @Override
     public void run() {
         latch = new CountDownLatch(1);
+        
+        /**
+         * 发起异步操作
+         * @param   attachment AsynchronousSocketChannel的附件，用于回调通知时作为入参被传递，调用者可以自定义
+         * @param   handler 异步操作回调通知接口，由调用者实现
+         */
         client.connect(new InetSocketAddress(host, port), this, this);
         
         try{
@@ -59,8 +65,10 @@ public class AsyncTimeClientHandler implements CompletionHandler<Void, AsyncTime
             @Override
             public void completed(Integer result, ByteBuffer buffer) {
                 if(buffer.hasRemaining()){
+                    // 如果发送缓冲区仍有尚未发送的字节，将继续异步发送
                     client.write(buffer, buffer, this);
                 }else{
+                    // 如果已经发送完成，则执行异步读取操作
                     ByteBuffer readBuffer = ByteBuffer.allocate(1024);
                     client.read(readBuffer, readBuffer, new CompletionHandler<Integer, ByteBuffer>(){
 
