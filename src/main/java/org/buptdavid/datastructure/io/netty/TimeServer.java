@@ -8,6 +8,8 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.handler.codec.string.StringDecoder;
 
 /**
  * Netty时间服务器服务端 TimeServer
@@ -55,6 +57,13 @@ public class TimeServer {
 
         @Override
         protected void initChannel(SocketChannel arg0) throws Exception {
+            // LineBasedFrameDecoder的工作原理是它依次遍历ByteBuf中的可读字节，判断看是否有"\n"或者"\r\n",
+            // 如果有，就以此位置为结束位置，从可读索引到结束位置区间的字节就组成了一行
+            // 如果连续读取到最大长度后仍然没有发现换行符，就不抛出异常，同时忽略掉之前读到的异常码流
+            arg0.pipeline().addLast(new LineBasedFrameDecoder(1024));
+            // StringDecoder的功能就是将接受到的对象转换成字符串，然后继续调用后面的handler
+            // LineBaseFrameDecoder+StringDecoder组合就是按行切换的文本编码器，用来支持TCP的粘包和拆包
+            arg0.pipeline().addLast(new StringDecoder());
             arg0.pipeline().addLast(new TimeServerHandler());
         }
         
