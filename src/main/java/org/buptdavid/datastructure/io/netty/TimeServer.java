@@ -34,6 +34,7 @@ public class TimeServer {
             // 绑定端口，同步等待成功
             // 类似java.util.concurrrent.Future,主要用于异步操作的通知回调
             ChannelFuture f = b.bind(port).sync();
+            System.out.println("The time server is start in port : " + port);
             
             // 等待服务端监听端口关闭
             // 进行阻塞，等待服务端链路关闭后main函数才退出
