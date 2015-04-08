@@ -1,4 +1,4 @@
-package org.buptdavid.datastructure.io.netty;
+package org.buptdavid.datastructure.io.netty.tcpacketsplicing;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

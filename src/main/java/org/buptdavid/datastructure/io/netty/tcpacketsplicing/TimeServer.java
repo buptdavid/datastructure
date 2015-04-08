@@ -1,4 +1,4 @@
-package org.buptdavid.datastructure.io.netty;
+package org.buptdavid.datastructure.io.netty.tcpacketsplicing;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
