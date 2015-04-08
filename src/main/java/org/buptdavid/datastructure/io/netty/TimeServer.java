@@ -65,6 +65,10 @@ public class TimeServer {
             // LineBaseFrameDecoder+StringDecoder组合就是按行切换的文本编码器，用来支持TCP的粘包和拆包
             arg0.pipeline().addLast(new StringDecoder());
             arg0.pipeline().addLast(new TimeServerHandler());
+            
+            // 除此之外，还有两种解码器，他们都能解决TCP粘包拆包导致的读半包问题
+            // 1. DelimiterBasedFrameDecoder 自动完成以分隔符做结束标志的消息的解码
+            // 2. FixedLengthFrameDecoder 自动完成对定长消息的解码
         }
         
     }
