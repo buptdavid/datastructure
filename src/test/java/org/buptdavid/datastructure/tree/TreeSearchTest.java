@@ -50,19 +50,19 @@ public class TreeSearchTest {
 	 * 前序遍历测试
 	 */
 	@Test
-	public void frontSearchTest(){
+	public void preorderTraversalTest(){
 		TreeSearch<Integer> treeSearch = new TreeSearch<Integer>();
 		
 		Integer value = 5;
 		String expectedSearchPath = "1->2->4->8->5";
-		treeSearch.frontSearch(root, value);
+		treeSearch.preorderTraversal(root, value);
 		Assert.assertTrue(expectedSearchPath.equals(treeSearch.searchPath.toString()));
 		
 		treeSearch = new TreeSearch<Integer>();
 		
 		value = 6;
 		expectedSearchPath = "1->2->4->8->5->3->6";
-		treeSearch.frontSearch(root, value);
+		treeSearch.preorderTraversal(root, value);
 		Assert.assertTrue(expectedSearchPath.equals(treeSearch.searchPath.toString()));
 	}
 	
@@ -70,19 +70,19 @@ public class TreeSearchTest {
 	 * 中序遍历测试
 	 */
 	@Test
-	public void middleSearchTest(){
+	public void inorderTraversalTest(){
 		TreeSearch<Integer> treeSearch = new TreeSearch<Integer>();
 		
 		Integer value = 5;
 		String expectedSearchPath = "8->4->2->5";
-		treeSearch.middleSearch(root, value);
+		treeSearch.inorderTraversal(root, value);
 		Assert.assertTrue(expectedSearchPath.equals(treeSearch.searchPath.toString()));
 		
 		treeSearch = new TreeSearch<Integer>();
 		
 		value = 6;
 		expectedSearchPath = "8->4->2->5->1->6";
-		treeSearch.middleSearch(root, value);
+		treeSearch.inorderTraversal(root, value);
 		Assert.assertTrue(expectedSearchPath.equals(treeSearch.searchPath.toString()));
 	}
 
@@ -90,19 +90,19 @@ public class TreeSearchTest {
 	 * 后序遍历测试
 	 */
 	@Test
-	public void behindSearchTest(){
+	public void postorderTraversalTest(){
 		TreeSearch<Integer> treeSearch = new TreeSearch<Integer>();
 		
 		Integer value = 5;
 		String expectedSearchPath = "8->4->5";
-		treeSearch.behindSearch(root, value);
+		treeSearch.postorderTraversal(root, value);
 		Assert.assertTrue(expectedSearchPath.equals(treeSearch.searchPath.toString()));
 		
 		treeSearch = new TreeSearch<Integer>();
 		
 		value = 6;
 		expectedSearchPath = "8->4->5->2->6";
-		treeSearch.behindSearch(root, value);
+		treeSearch.postorderTraversal(root, value);
 		Assert.assertTrue(expectedSearchPath.equals(treeSearch.searchPath.toString()));
 	}
 }

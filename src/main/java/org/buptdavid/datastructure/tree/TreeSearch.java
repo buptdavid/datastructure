@@ -15,7 +15,7 @@ public class TreeSearch<T> {
 	 * @param item
 	 * @return
 	 */
-	public void frontSearch(TreeNode<T> root, T data){
+	public void preorderTraversal(TreeNode<T> root, T data){
 		if(root == null){
 			return;
 		}
@@ -30,9 +30,9 @@ public class TreeSearch<T> {
 		}
 		
 		if(!isSearched)
-			frontSearch(root.left, data);
+		    preorderTraversal(root.left, data);
 		if(!isSearched)
-		frontSearch(root.right, data);
+		    preorderTraversal(root.right, data);
 	}
 	
 	/**
@@ -41,13 +41,13 @@ public class TreeSearch<T> {
 	 * @param item
 	 * @return
 	 */
-	public void middleSearch(TreeNode<T> root, T data){
+	public void inorderTraversal(TreeNode<T> root, T data){
 		if(root == null){
 			return;
 		}
 		
 		if(!isSearched)
-			middleSearch(root.left, data);
+		    inorderTraversal(root.left, data);
 		
 		if(!isSearched){
 			if(!searchPath.toString().equals("")){
@@ -59,7 +59,7 @@ public class TreeSearch<T> {
 		}
 		
 		if(!isSearched)
-			middleSearch(root.right, data);
+		    inorderTraversal(root.right, data);
 	}
 	
 	/**
@@ -67,16 +67,16 @@ public class TreeSearch<T> {
 	 * @param item
 	 * @return
 	 */
-	public void behindSearch(TreeNode<T> root, T data){
+	public void postorderTraversal(TreeNode<T> root, T data){
 		if(root == null){
 			return;
 		}
 		
 		if(!isSearched)
-			behindSearch(root.left, data);
+		    postorderTraversal(root.left, data);
 		
 		if(!isSearched)
-			behindSearch(root.right, data);
+		    postorderTraversal(root.right, data);
 		
 		if(!isSearched){
 			if(!searchPath.toString().equals("")){
